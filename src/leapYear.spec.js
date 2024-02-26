@@ -10,6 +10,9 @@ describe("Leap Year", () => {
   it("The numbers that are not divisible by 4 shouldn't be considered a leap year", () => {
     expect(isLeap(2017)).toEqual(false);
   });
+  it("The number 400 should be considered a leap year", () => {
+    expect(isLeap(400)).toEqual(true);
+  });
 });
 
 
