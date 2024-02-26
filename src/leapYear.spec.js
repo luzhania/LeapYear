@@ -7,13 +7,13 @@ describe("Leap Year", () => {
   it("The number 5 shouldn't be considered a leap year", () => {
     expect(isLeap(5)).toEqual(false);
   });
-  it("The numbers that are not divisible by 4 shouldn't be considered a leap year", () => {
+  it("The numbers that are not divisible by 4 shouldn't be considered a leap year, such as 2017", () => {
     expect(isLeap(2017)).toEqual(false);
   });
-  it("The numbers that are not divisible by 4 shouldn't be considered a leap year", () => {
+  it("The numbers that are not divisible by 4 shouldn't be considered a leap year, such as 2018", () => {
     expect(isLeap(2018)).toEqual(false);
   });
-  it("The numbers that are not divisible by 4 shouldn't be considered a leap year", () => {
+  it("The numbers that are not divisible by 4 shouldn't be considered a leap year, such as 2019", () => {
     expect(isLeap(2019)).toEqual(false);
   });
   it("The number 400 should be considered a leap year", () => {
