@@ -1,15 +1,19 @@
-import sumar from "./sumador";
+import isLeap from "./isLeap";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const year_input = document.querySelector("#year");
+const form = document.querySelector("#leapYear-form");
+const div = document.querySelector("#result-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const year = Number.parseInt(year_input.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  if (isLeap(year)) {
+    div.innerHTML = "<p>" + year + " is a leap year</p>";
+  }
+  else {
+    div.innerHTML = "<p>" + year + " is not a leap year</p>";
+  }
+
 });
